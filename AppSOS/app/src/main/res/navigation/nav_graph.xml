@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.appsos.main.FirstFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_checkCancelSend"
+            app:destination="@id/checkCancelSend" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.appsos.main.SecondFragment"
+        android:label="@string/menu"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment"
+            app:popUpTo="@id/FirstFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_SecondFragment_to_addNumberPhone"
+            app:destination="@id/addNumberPhone" />
+        <action
+            android:id="@+id/action_SecondFragment_to_callPhone"
+            app:destination="@id/callPhone" />
+        <action
+            android:id="@+id/action_SecondFragment_to_aid"
+            app:destination="@id/aid" />
+        <action
+            android:id="@+id/action_SecondFragment_to_tutorial"
+            app:destination="@id/tutorial" />
+        <action
+            android:id="@+id/action_SecondFragment_to_skill"
+            app:destination="@id/skill" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNumberPhone"
+        android:name="com.example.appsos.fragmentOfLearn.AddNumberPhone"
+        android:label="@string/menuNumberPhone"
+        tools:layout="@layout/fragment_add_number_phone" />
+    <fragment
+        android:id="@+id/aid"
+        android:name="com.example.appsos.fragmentOfLearn.Aid"
+        android:label="@string/aid"
+        tools:layout="@layout/fragment_aid" >
+        <action
+            android:id="@+id/action_aid_to_subAidAndSkill"
+            app:destination="@id/subAidAndSkill" />
+    </fragment>
+    <fragment
+        android:id="@+id/callPhone"
+        android:name="com.example.appsos.fragmentOfLearn.CallPhone"
+        android:label="@string/callEmergency"
+        tools:layout="@layout/fragment_call_phone" />
+    <fragment
+        android:id="@+id/skill"
+        android:name="com.example.appsos.fragmentOfLearn.Skill"
+        android:label="@string/skill"
+        tools:layout="@layout/fragment_skill" >
+        <action
+            android:id="@+id/action_skill_to_subAidAndSkill"
+            app:destination="@id/subAidAndSkill" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutorial"
+        android:name="com.example.appsos.fragmentOfLearn.Tutorial"
+        android:label="@string/tutorial"
+        tools:layout="@layout/fragment_tutorial" />
+    <fragment
+        android:id="@+id/subAidAndSkill"
+        android:name="com.example.appsos.fragmentOfLearn.SubAidAndSkill"
+        tools:layout="@layout/fragment_sub_aid_and_skill" />
+    <fragment
+        android:id="@+id/checkCancelSend"
+        android:name="com.example.appsos.Dialog.CheckCancelSend"
+        android:label="fragment_check_cancel_send"
+        tools:layout="@layout/fragment_check_cancel_send" >
+        <action
+            android:id="@+id/action_checkCancelSend_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+</navigation>

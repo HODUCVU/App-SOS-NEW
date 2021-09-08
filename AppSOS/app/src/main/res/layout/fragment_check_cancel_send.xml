@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dialog.CheckCancelSend"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bgr1">
+    <TextView
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        android:text="@string/cancelSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"/>
+    <ImageView
+        android:id="@+id/imageCountDown"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img3"
+        android:importantForAccessibility="no"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+    <Button
+        android:id="@+id/btnCancelSend"
+        android:layout_marginTop="15dp"
+        android:text="Hủy"
+        android:background="@drawable/bgr2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
